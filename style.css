@@ -230,5 +230,25 @@ footer {
         to { opacity: 1; transform: translateY(0); }
     }
 }
+#nosotros {
+  padding: 100px 20px;
+  text-align: center;
+  background-color: #f8f3ef;
+  color: #333;
+}
+
+#nosotros h2 {
+  font-size: 2.5em;
+  color: rgb(136,49,9);
+  margin-bottom: 40px;
+}
+
+.nosotros-content {
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-size: 1.2em;
+}
+
 
 
