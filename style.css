@@ -59,13 +59,15 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    min-height: 80vh;
     text-align: center;
-    height: 100vh;
-    background: url('mueble.jpeg') no-repeat center center/cover;
-    color: rgb(102,0,0);
-    font-size: 30px;
-    position: relative;
+    padding: 40px 20px;
+    background-image: url('mueble.jpeg'); /* reemplaza con tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 }
 #inicio h1 {
     text-shadow: -1px -1px 0 #faf8f8,
@@ -172,4 +174,5 @@ footer {
     #nav.active { display: flex; }
 }
 </style>
+
 
