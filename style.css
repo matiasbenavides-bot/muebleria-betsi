@@ -1,103 +1,116 @@
-<style>
-/* --- GENERAL --- */
-* { box-sizing: border-box; margin:0; padding:0; }
-body { font-family: Arial, sans-serif; background-color: rgb(248,227,195); }
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/* --- HEADER --- */
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(248, 227, 195);
+}
+
+/* Header */
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
     background-color: #4e3305;
+    color: yellow;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
 }
 
 .logo {
     font-size: 30px;
-    color: yellow;
-    cursor: pointer;
     transition: 0.5s;
 }
-.logo:hover { color: rgb(255,153,0); }
 
-.menu {
-    display: none;
-    font-size: 30px;
-    color: yellow;
-    cursor: pointer;
+.logo:hover {
+    color: rgb(255, 153, 0);
 }
 
-/* --- NAV --- */
+/* Navegación */
 #nav {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
     gap: 60px;
-    list-style: none;
+    align-items: center;
 }
 
 #nav a {
     text-decoration: none;
     color: white;
     font-size: 25px;
-    transition: 0.5s;
+    transition: 0.3s;
 }
+
 #nav a:hover {
     background-color: white;
     color: black;
     transform: scale(1.1);
 }
-#nav a:active { color: blueviolet; }
 
-/* --- HERO / INICIO --- */
+#nav a:active {
+    color: blueviolet;
+}
+
+/* Menú hamburguesa */
+.menu {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+/* Hero / Inicio */
 #inicio {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 80vh;
     text-align: center;
-    padding: 40px 20px;
-    background-image: url('mueble.jpeg'); /* reemplaza con tu imagen */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    height: 100vh;
+    background: url('mueble.jpeg') no-repeat center center/cover;
+    color: rgb(102, 0, 0);
 }
 
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
-#inicio h1 {
-    text-shadow: -1px -1px 0 #faf8f8,
-                 1px -1px 0 #ebe2e2,
-                -1px 1px 0 #fdf9f9,
-                 1px 1px 0 #fcf5f5;
-    margin-bottom: 20px;
-}
+
 .btn {
     background-color: #d1a561;
     color: white;
     padding: 12px 25px;
     border-radius: 25px;
-    font-size: 1.2em;
     text-decoration: none;
+    font-size: 1.2em;
     transition: 0.3s;
 }
+
 .btn:hover {
     background-color: #b98a4e;
     transform: scale(1.05);
     box-shadow: 0 6px 10px rgba(0,0,0,0.4);
 }
 
-/* --- SECCIONES --- */
-section {
+/* Servicios */
+#servicios {
     padding: 100px 20px;
     text-align: center;
+    background-color: #f8f3ef;
 }
-#servicios { background-color: #f8f3ef; }
-#servicios h2 { font-size: 2.5em; margin-bottom: 50px; color: rgb(136,49,9); }
+
+#servicios h2 {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    color: rgb(136, 49, 9);
+}
 
 .servicios-container {
     display: flex;
@@ -105,6 +118,7 @@ section {
     gap: 40px;
     flex-wrap: wrap;
 }
+
 .servicio {
     background-color: white;
     border-radius: 15px;
@@ -113,20 +127,52 @@ section {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: 0.3s;
 }
+
 .servicio:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
-.servicio h3 { color: rgb(136,49,9); margin-bottom: 10px; }
-.servicio p { color: #333; }
 
-#contactos { background-color: #f5ede6; }
-#contactos h2 { font-size: 2.5em; color: rgb(136,49,9); margin-bottom: 20px; }
-#contactos p { font-size: 1.2em; color: #333; margin: 10px 0; }
-.correo { color: rgb(136,49,9); text-decoration: none; font-weight: bold; font-size: 1.2em; }
-.correo:hover { color: #b9844f; text-decoration: underline; }
+.servicio h3 {
+    color: rgb(136, 49, 9);
+    margin-bottom: 10px;
+}
 
-/* Botón de WhatsApp */
+.servicio p {
+    color: #333;
+}
+
+/* Contactos */
+#contactos {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: #f5ede6;
+}
+
+#contactos h2 {
+    font-size: 2.5em;
+    color: rgb(136, 49, 9);
+    margin-bottom: 20px;
+}
+
+#contactos p {
+    font-size: 1.2em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.correo {
+    color: rgb(136, 49, 9);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.correo:hover {
+    color: #b9844f;
+    text-decoration: underline;
+}
+
 .whatsapp-btn {
     display: inline-block;
     margin-top: 20px;
@@ -140,24 +186,26 @@ section {
     transition: 0.3s;
     box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 }
+
 .whatsapp-btn:hover {
     background-color: #1ebc5d;
     transform: scale(1.05);
 }
 
-/* --- FOOTER --- */
+/* Footer */
 footer {
     background-color: #4e3305;
     color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 0;
+    text-align: center;
+    padding: 20px;
 }
 
-/* --- RESPONSIVE --- */
-@media(max-width:768px){
-    .menu { display: block; }
+/* Responsive */
+@media(max-width: 768px) {
+    .menu {
+        display: block;
+    }
+
     #nav {
         display: none;
         flex-direction: column;
@@ -171,8 +219,16 @@ footer {
         padding: 20px 0;
         z-index: 999;
     }
-    #nav.active { display: flex; }
+
+    #nav.active {
+        display: flex;
+        animation: slideDown 0.3s ease;
+    }
+
+    @keyframes slideDown {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
 }
-</style>
 
 
