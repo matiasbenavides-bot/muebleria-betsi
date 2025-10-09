@@ -290,6 +290,30 @@ footer {
   border: none;
 }
 
+img{
+    width: 500px;
+    height: 500px;
+}
+#carrusel{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    background-color: #ffffff;
+}
+.element{
+    flex: 1 0 auto;
+    margin: 0 30px;
+    width: 500px;
+    height: 500px;
+
+}
+.ola h1 {
+  color: #4e3305;
+  font-size: 2.5em;
+  text-align: center;
+  margin-top: 50px;
+}
+
 
 
 
