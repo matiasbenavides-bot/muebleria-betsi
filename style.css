@@ -289,8 +289,8 @@ footer {
   height: 400px;
   border: none;
 }
-
 .carrusel{
+background-color: #f8f3ef;
     margin: 100px auto;
     width: 90%;
     height: 200px;
@@ -301,6 +301,7 @@ footer {
     display: none;
 }
 .group{
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -308,7 +309,7 @@ footer {
     animation: spin 6s infinite linear;
     padding-right: 1em;
 }
-img{
+ .group img{
     display: flexbox;
     width: 150px;
     height: 150px;
@@ -316,28 +317,13 @@ img{
 .card{
 flex: 0 0 5em;
 padding: 1em;
-
 align-content: center;
 }
 @keyframes spin{
 from {translate: 0;}
 to {translate: -100%;}
 }
-@media (max-width: 600px) {
-  .group {
-    gap: 0.5em;
-    animation-duration: 10s; 
-  }
 
-  .card img {
-    width: 120px;
-    height: 120px;
-  }
-
-  .card {
-    border-radius: 10px;
-  }
-}
 
 
 
