@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mesas a medida | Mueblería Betsi</title>
+
+  <meta name="description" content="Catálogo de mesas a medida en Santiago. Cotiza directamente por WhatsApp seleccionando el modelo que te gusta.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mesas a medida | Mueblería Betsi">
+  <meta property="og:description" content="Catálogo de mesas a medida. Cotiza por WhatsApp con el modelo que elijas.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="../img/mesa1.svg">
+
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="overlay"></div>
+  <div class="container">
+
+    <div class="logo">
+      <h1>Mueblería Betsi</h1>
+    </div>
+
+    <button
+      class="menu-toggle"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+      aria-controls="nav-menu">
+      ☰
+    </button>
+
+    <nav id="nav-menu" class="nav" aria-label="Navegación principal">
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../index.html#productos">Productos</a></li>
+        <li><a href="../index.html#catalogo">Catálogo</a></li>
+        <li><a href="../index.html#cotizar">Cotizar</a></li>
+        <li><a href="../index.html#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+<section class="catalogo-productos">
+  <header class="section-header container">
+    <h1>Mesas a medida</h1>
+    <p>Selecciona un modelo y cotiza directamente por WhatsApp.</p>
+  </header>
+
+  <div class="productos-container container">
+
+    <!-- PRODUCTO 1 -->
+    <article id="mesa-001" class="producto">
+      <img src="../img/mesa1.svg" alt="Mesa de centro a medida" loading="lazy">
+
+      <div class="producto-info">
+        <h3>Mesa de Centro</h3>
+        <p class="codigo">Código: MESA-001</p>
+
+        <button
+          class="btn cotizar-btn"
+          data-nombre="Mesa de Centro"
+          data-id="MESA-001">
+          Cotizar por WhatsApp
+        </button>
+      </div>
+    </article>
+
+    <!-- PRODUCTO 2 -->
+    <article id="mesa-002" class="producto">
+      <img src="../img/mesa2.svg" alt="Mesa de comedor a medida" loading="lazy">
+
+      <div class="producto-info">
+        <h3>Mesa de Comedor</h3>
+        <p class="codigo">Código: MESA-002</p>
+
+        <button
+          class="btn cotizar-btn"
+          data-nombre="Mesa de Comedor"
+          data-id="MESA-002">
+          Cotizar por WhatsApp
+        </button>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-container container">
+    <p>&copy; 2026 Mueblería Betsi. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script src="../js/menu.js"></script>
+<script src="../js/catalogo.js"></script>
+
+</body>
+</html>

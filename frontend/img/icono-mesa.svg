@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Mesa (table) -->
+  <rect x="6" y="20" width="52" height="6" rx="2" fill="#c9a227"/>
+  <rect x="10" y="16" width="44" height="14" rx="3" fill="#a8881f"/>
+  <!-- Patas -->
+  <rect x="12" y="30" width="5" height="22" rx="1.5" fill="#8a6a52"/>
+  <rect x="47" y="30" width="5" height="22" rx="1.5" fill="#8a6a52"/>
+  <rect x="29" y="30" width="5" height="22" rx="1.5" fill="#6b4f3b"/>
+  <!-- Base -->
+  <rect x="8" y="52" width="48" height="4" rx="2" fill="#4a3628"/>
+</svg>

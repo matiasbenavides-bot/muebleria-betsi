@@ -1,18 +1,51 @@
-document.querySelector(".cotizar-form").addEventListener("submit", function(e) {
-  e.preventDefault();
+/**
+ * Formulario de cotización general (landing)
+ *
+ * Arma el mensaje y lo envía por WhatsApp al dueño de la mueblería.
+ */
+(function () {
+  "use strict";
 
-  const nombre = document.getElementById("nombre").value;
-  const tipo = document.getElementById("tipo").value;
-  const descripcion = document.getElementById("descripcion").value;
+  const TELEFONO = "56988996929"; // Chile, formato internacional
+  const form = document.querySelector(".cotizar-form");
 
-  const telefono = "56988996929"; // tu número en formato internacional (Chile)
+  if (!form) {
+    return; // Página sin formulario (ej. catálogo) — no hace nada.
+  }
 
-  const mensaje = `Hola, quiero solicitar una cotización:
-Nombre: ${nombre}
-Tipo de mueble: ${tipo}
-Descripción: ${descripcion}`;
+  const boton = form.querySelector('button[type="submit"]');
 
-  const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-  window.open(url, "_blank");
-});
+    const nombre = document.getElementById("nombre").value.trim();
+    const tipo = document.getElementById("tipo").value.trim();
+    const descripcion = document.getElementById("descripcion").value.trim();
+
+    const mensaje =
+      "Hola, quiero solicitar una cotización a medida:\n" +
+      "👤 Nombre: " + nombre + "\n" +
+      "🪑 Tipo de mueble: " + (tipo || "A definir") + "\n" +
+      "📝 Descripción: " + (descripcion || "Sin descripción") + "\n" +
+      "\nQuedo atento a tu respuesta. Gracias!";
+
+    const url =
+      "https://wa.me/" + TELEFONO + "?text=" + encodeURIComponent(mensaje);
+
+    // Feedback visual breve.
+    if (boton) {
+      boton.textContent = "Abriendo WhatsApp…";
+      boton.disabled = true;
+    }
+
+    window.open(url, "_blank");
+
+    // Restaura el botón si el usuario vuelve a la pestaña.
+    setTimeout(function () {
+      if (boton) {
+        boton.textContent = "Solicitar cotización";
+        boton.disabled = false;
+      }
+    }, 2500);
+  });
+})();

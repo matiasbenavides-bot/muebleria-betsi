@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,15 @@
   <title>Mueblería Betsi | Muebles a medida en Santiago</title>
 
   <meta name="description" content="Fabricación y restauración de muebles a medida en Santiago. Más de 32 años de experiencia trabajando con maderas nobles.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+
+  <!-- Open Graph (compartir en WhatsApp / redes) -->
+  <meta property="og:title" content="Mueblería Betsi | Muebles a medida">
+  <meta property="og:description" content="Fabricación y restauración de muebles a medida en Santiago. Cotiza directo por WhatsApp.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="img/hero1.jpeg">
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/main.css">
@@ -97,33 +106,7 @@
     <p>Algunos de nuestros trabajos recientes.</p>
   </header>
 
-  <div class="productos-container container">
-
-    <article class="producto">
-      <img src="img/producto1.jpeg" alt="Silla personalizada">
-      <div class="producto-info">
-        <h3>Silla tapizada</h3>
-        <p class="precio">A pedido</p>
-      </div>
-    </article>
-
-    <article class="producto">
-      <img src="img/producto2.jpeg" alt="Silla tapizada personalizada">
-      <div class="producto-info">
-        <h3>Silla tapizada</h3>
-        <p class="precio">A pedido</p>
-      </div>
-    </article>
-
-    <article class="producto">
-      <img src="img/producto3.jpeg" alt="Sillon hecho a medida">
-      <div class="producto-info">
-        <h3>Sillon a medida</h3>
-        <p class="precio">A pedido</p>
-      </div>
-    </article>
-
-  </div>
+  <div id="productos-destacados" class="productos-container container"></div>
 </section>
 
 <section id="catalogo" class="catalogo">
@@ -149,6 +132,24 @@
       <img src="img/icono-sillon.png" alt="Ícono de sillones">
     </div>
     <h3>Sillones</h3>
+  </a>
+</div>
+
+<div class="categoria">
+  <a href="html/mesas.html" class="categoria-link">
+    <div class="icono">
+      <img src="img/icono-mesa.svg" alt="Ícono de mesas">
+    </div>
+    <h3>Mesas</h3>
+  </a>
+</div>
+
+<div class="categoria">
+  <a href="html/estantes.html" class="categoria-link">
+    <div class="icono">
+      <img src="img/icono-estante.svg" alt="Ícono de estantes">
+    </div>
+    <h3>Estantes</h3>
   </a>
 </div>
   </div>
@@ -305,7 +306,31 @@
 
 </footer>
 
+<!-- WhatsApp flotante -->
+<a class="wa-flotante" href="https://wa.me/56988996929" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.3c1.4.7 3 .9 4.7.9 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3C3.8 15.1 3.4 13.6 3.4 12 3.4 7.3 7.3 3.4 12 3.4s8.6 3.9 8.6 8.6-3.9 8.6-8.6 8.6zm4.7-6.5c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.1.2-.3.2-.5.1-.3-.1-1.1-.4-2-1.2-.7-.7-1.2-1.5-1.4-1.7-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s.9 2.5 1 2.6c.1.2 1.8 2.7 4.3 3.8.6.3 1.1.4 1.4.5.6.2 1.1.2 1.5.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2 0-.1-.1-.2-.3-.3z"/>
+  </svg>
+  <span class="wa-txt">Escríbenos</span>
+</a>
+
 <script src="js/menu.js"></script>
+<script src="js/productos.js?v=3"></script>
+<script src="js/catalogo.js"></script>
 <script src="js/formulario.js"></script>
+<script>
+  // Productos destacados (los primeros 6 del catálogo) en la home
+  renderProductos("productos-destacados", "");
+  // Limita a 6 los destacados de la portada (se renderizan los primeros de Sillas)
+  (function () {
+    var cont = document.getElementById("productos-destacados");
+    if (cont) {
+      var cards = cont.querySelectorAll(".producto");
+      for (var i = 6; i < cards.length; i++) {
+        cards[i].style.display = "none";
+      }
+    }
+  })();
+</script>
 </body>
 </html>

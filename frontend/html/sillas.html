@@ -6,22 +6,48 @@
 
   <title>Sillas a medida | Mueblería Betsi</title>
 
+  <meta name="description" content="Catálogo de sillas a medida en Santiago. Cotiza directamente por WhatsApp seleccionando el modelo que te gusta.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sillas a medida | Mueblería Betsi">
+  <meta property="og:description" content="Catálogo de sillas a medida. Cotiza por WhatsApp con el modelo que elijas.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="../img/silla1.jpeg">
+
   <link rel="stylesheet" href="../css/main.css">
 </head>
 
 <body>
 
 <header class="header">
+  <div class="overlay"></div>
   <div class="container">
-    <p class="logo">Mueblería Betsi</p>
 
-    <nav class="nav">
+    <div class="logo">
+      <h1>Mueblería Betsi</h1>
+    </div>
+
+    <button
+      class="menu-toggle"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+      aria-controls="nav-menu">
+      ☰
+    </button>
+
+    <nav id="nav-menu" class="nav" aria-label="Navegación principal">
       <ul>
         <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../index.html#productos">Productos</a></li>
         <li><a href="../index.html#catalogo">Catálogo</a></li>
+        <li><a href="../index.html#cotizar">Cotizar</a></li>
         <li><a href="../index.html#contacto">Contacto</a></li>
       </ul>
     </nav>
+
   </div>
 </header>
 
@@ -33,71 +59,25 @@
     <p>Selecciona un modelo y cotiza directamente por WhatsApp.</p>
   </header>
 
-  <div class="productos-container container">
+  <div id="productos-sillas" class="productos-container container"></div>
 
-    <!-- PRODUCTO 1 -->
-    <article id="silla-001" class="producto">
-      <img src="../img/silla1.jpeg" alt="Silla tapizada moderna" loading="lazy">
-
-      <div class="producto-info">
-        <h3>Silla Tapizada</h3>
-        <p class="codigo">Código: SILLA-001</p>
-
-        <button 
-          class="btn cotizar-btn"
-          data-nombre="Silla Tapizada"
-          data-id="SILLA-001">
-          Cotizar por WhatsApp
-        </button>
-      </div>
-    </article>
-
-    <!-- PRODUCTO 2 -->
-    <article id="silla-002" class="producto">
-      <img src="../img/silla2.jpeg" alt="Silla de madera a medida" loading="lazy">
-
-      <div class="producto-info">
-        <h3>Silla tapizada</h3>
-        <p class="codigo">Código: SILLA-002</p>
-
-        <button 
-          class="btn cotizar-btn"
-          data-nombre="Silla de Madera"
-          data-id="SILLA-002">
-          Cotizar por WhatsApp
-        </button>
-      </div>
-    </article>
-
-    <!-- PRODUCTO 3 -->
-    <article id="silla-003" class="producto">
-      <img src="../img/silla3.jpeg" alt="Silla clásica restaurada" loading="lazy">
-
-      <div class="producto-info">
-        <h3>Silla Clásica</h3>
-        <p class="codigo">Código: SILLA-003</p>
-
-        <button 
-          class="btn cotizar-btn"
-          data-nombre="Silla Clásica"
-          data-id="SILLA-003">
-          Cotizar por WhatsApp
-        </button>
-      </div>
-    </article>
-
-  </div>
 </section>
 
 </main>
 
 <footer class="footer">
   <div class="footer-container container">
-    <p>&copy; 2026 Mueblería Betsi</p>
+    <p>&copy; 2026 Mueblería Betsi. Todos los derechos reservados.</p>
   </div>
 </footer>
 
+<script src="../js/menu.js"></script>
+<script src="../js/productos.js?v=3"></script>
 <script src="../js/catalogo.js"></script>
+<script>
+  // Renderiza las sillas desde el catálogo central
+  renderProductos("productos-sillas", "Sillas");
+</script>
 
 </body>
 </html>

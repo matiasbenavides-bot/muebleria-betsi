@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <!-- Fondo -->
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a2a2a"/>
+      <stop offset="1" stop-color="#161616"/>
+    </linearGradient>
+  </defs>
+  <!-- Mesa -->
+  <ellipse cx="200" cy="150" rx="120" ry="28" fill="#c9a227"/>
+  <rect x="200" y="178" width="8" height="60" rx="3" fill="#8a6a52"/>
+  <rect x="170" y="178" width="8" height="60" rx="3" fill="#6b4f3b"/>
+  <rect x="228" y="178" width="8" height="60" rx="3" fill="#6b4f3b"/>
+  <rect x="176" y="238" width="160" height="8" rx="4" fill="#4a3628"/>
+  <!-- Texto code -->
+  <text x="200" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#a8a8a8">MESA-001 · Reemplazar por foto</text>
+</svg>

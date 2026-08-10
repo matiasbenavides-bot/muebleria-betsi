@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Fondo -->
+  <rect width="64" height="64" rx="14" fill="#121212"/>
+  <!-- Sillón -->
+  <path d="M10 34c0-3 2.5-5 5.5-5h2.5v-8c0-4 3.5-7 8-7h12c4.5 0 8 3 8 7v8h2.5c3 0 5.5 2 5.5 5v14H10V34z"
+        fill="#c9a227"/>
+  <!-- Brazo izquierdo -->
+  <rect x="16" y="24" width="6" height="12" rx="3" fill="#a8881f"/>
+  <!-- Brazo derecho -->
+  <rect x="42" y="24" width="6" height="12" rx="3" fill="#a8881f"/>
+  <!-- Patas -->
+  <rect x="18" y="48" width="4" height="10" rx="1" fill="#8a6a52"/>
+  <rect x="42" y="48" width="4" height="10" rx="1" fill="#8a6a52"/>
+</svg>

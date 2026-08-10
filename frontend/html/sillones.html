@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sillones a medida | Mueblería Betsi</title>
+
+  <meta name="description" content="Catálogo de sillones a medida en Santiago. Cotiza directamente por WhatsApp seleccionando el modelo que te gusta.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sillones a medida | Mueblería Betsi">
+  <meta property="og:description" content="Catálogo de sillones a medida. Cotiza por WhatsApp con el modelo que elijas.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="../img/sillon1.jpeg">
+
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="overlay"></div>
+  <div class="container">
+
+    <div class="logo">
+      <h1>Mueblería Betsi</h1>
+    </div>
+
+    <button
+      class="menu-toggle"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+      aria-controls="nav-menu">
+      ☰
+    </button>
+
+    <nav id="nav-menu" class="nav" aria-label="Navegación principal">
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../index.html#productos">Productos</a></li>
+        <li><a href="../index.html#catalogo">Catálogo</a></li>
+        <li><a href="../index.html#cotizar">Cotizar</a></li>
+        <li><a href="../index.html#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+<section class="catalogo-productos">
+  <header class="section-header container">
+    <h1>Sillones a medida</h1>
+    <p>Selecciona un modelo y cotiza directamente por WhatsApp.</p>
+  </header>
+
+  <div id="productos-sillones" class="productos-container container"></div>
+
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-container container">
+    <p>&copy; 2026 Mueblería Betsi. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script src="../js/menu.js"></script>
+<script src="../js/productos.js?v=3"></script>
+<script src="../js/catalogo.js"></script>
+<script>
+  // Renderiza los sillones desde el catálogo central
+  renderProductos("productos-sillones", "Sillones");
+</script>
+
+</body>
+</html>

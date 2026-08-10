@@ -1,0 +1,49 @@
+/* =========================
+   BOTÓN FLOTANTE WHATSAPP
+   Perfil bajo: glow en hover, SIN scale.
+========================= */
+.wa-flotante {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  background: #25d366;
+  color: #ffffff;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  transition: box-shadow var(--transition), filter var(--transition);
+}
+
+.wa-flotante svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+/* Hover: brillo, sin scale (directriz diseño v2.0) */
+.wa-flotante:hover {
+  box-shadow: 0 0 18px rgba(37, 211, 102, 0.65);
+  filter: brightness(1.08);
+}
+
+.wa-flotante .wa-txt {
+  white-space: nowrap;
+}
+
+/* En móviles pequeños: solo el círculo con el ícono */
+@media (max-width: 480px) {
+  .wa-flotante {
+    padding: 14px;
+    border-radius: 50%;
+  }
+  .wa-flotante .wa-txt {
+    display: none;
+  }
+}
